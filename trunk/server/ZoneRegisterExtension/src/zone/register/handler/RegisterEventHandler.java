@@ -28,18 +28,18 @@ public class RegisterEventHandler extends BaseServerEventHandler {
         String username = (String) event.getParameter(SFSEventParam.LOGIN_NAME);
         //        String encryptedPassword = (String) event.getParameter(SFSEventParam.LOGIN_PASSWORD);
         ISFSObject customData = (ISFSObject) event.getParameter(SFSEventParam.LOGIN_IN_DATA);
-        int clientType = customData.getInt(Keys.CLIENT_TYPE);
+        short socialPlatform = customData.getShort(Keys.SOCIAL_PLATFORM);
         String email = customData.getUtfString(Keys.EMAIL);
         String encryptedPassword = customData.getUtfString(Keys.PASSWORD);
-        trace("RegisterEventHandler called nickname: " + username + " encryptedPassword: " + encryptedPassword + " customData " + clientType);
+        trace("RegisterEventHandler called nickname: " + username + " encryptedPassword: " + encryptedPassword + " socialPlatform " + socialPlatform);
         long id = 0;
-        if (clientType == Common.SOCIAL_BC) {
+        if (socialPlatform == Common.SOCIAL_BC) {
             String fullname = customData.getUtfString(Keys.FULL_NAME);
             byte gender = customData.getByte(Keys.GENDER);
             String birthdayString = customData.getUtfString(Keys.BIRTHDAY);
             DateTime birthday = new DateTime(birthdayString);
             String country = customData.getUtfString(Keys.COUNTRY);
-            id = userService.createUser(username, encryptedPassword, fullname, email, gender, birthday, country, clientType);
+            id = userService.createUser(username, encryptedPassword, fullname, email, gender, birthday, country, socialPlatform);
             if (id > 0) {
                 SFSErrorData errData = new SFSErrorData(SFSErrorCode.LOGIN_GUEST_NOT_ALLOWED);
                 errData.addParameter(username + " register success");
@@ -49,7 +49,7 @@ public class RegisterEventHandler extends BaseServerEventHandler {
                 errData.addParameter(username + " register fail");
                 throw new SFSLoginException("registerFail " + username, errData);
             }
-        } else if (clientType == Common.SOCIAL_FB) {
+        } else if (socialPlatform == Common.SOCIAL_FB) {
             String signedRequest = customData.getUtfString(Keys.SOCIAL_PASSWORD);
             ISFSObject socialProfile = customData.getSFSObject(Keys.SOCIAL_PROFILE);
             String fbUsername = socialProfile.getUtfString(Keys.FB_USERNAME);
@@ -61,7 +61,7 @@ public class RegisterEventHandler extends BaseServerEventHandler {
             String fbLocale = socialProfile.getUtfString(Keys.FB_LOCALE);
             String fbUpdateTimeString = socialProfile.getUtfString(Keys.FB_UPDATED_TIME);
             DateTime fbUpdateTime = new DateTime(fbUpdateTimeString);
-            boolean success = userService.registerSocialNetworkUser(username, encryptedPassword, email, clientType, fbUsername, signedRequest, fbFullname, fbEmail, fbGender, fbBirthday, fbLocale,
+            boolean success = userService.registerSocialNetworkUser(username, encryptedPassword, email, socialPlatform, fbUsername, signedRequest, fbFullname, fbEmail, fbGender, fbBirthday, fbLocale,
                     fbUpdateTime);
             if (success) {
                 SFSErrorData errData = new SFSErrorData(SFSErrorCode.LOGIN_GUEST_NOT_ALLOWED);

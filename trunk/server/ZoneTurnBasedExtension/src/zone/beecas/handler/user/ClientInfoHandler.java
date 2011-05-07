@@ -11,11 +11,12 @@ public class ClientInfoHandler extends BaseClientRequestHandler {
 
     @Override
     public void handleClientRequest(User user, ISFSObject object) {
-        int clientType = object.getInt(Keys.CLIENT_TYPE);
+        String clientType = object.getUtfString(Keys.CLIENT_TYPE);
+        short socialPlatform = object.getShort(Keys.SOCIAL_PLATFORM);
         short vendor = object.getShort(Keys.PUBLISHER);
         String version = object.getUtfString(Keys.VERSION);
-        trace(user.getName() + " sent clientType " + clientType + " vendor " + vendor + " version " + version);
-        user.setProperty(Keys.CLIENT_TYPE, clientType);
+        trace(user.getName() + " sent clientType " + clientType + " vendor " + vendor + " version " + version + " socialPlatform " + socialPlatform);
+        user.setProperty(Keys.SOCIAL_PLATFORM, socialPlatform);
         send(Commands.CLIENT_INFO, SFSObject.newInstance(), user);
     }
 
