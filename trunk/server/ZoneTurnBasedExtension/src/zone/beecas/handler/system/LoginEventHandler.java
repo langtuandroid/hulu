@@ -37,24 +37,17 @@ public class LoginEventHandler extends BaseServerEventHandler {
         String encryptedPassword = (String) event.getParameter(SFSEventParam.LOGIN_PASSWORD);
         ISession session = (Session) event.getParameter(SFSEventParam.SESSION);
         ISFSObject customData = (ISFSObject) event.getParameter(SFSEventParam.LOGIN_IN_DATA);
-        //boolean isAir = false; 
-        int clientType = customData.getInt(Keys.CLIENT_TYPE);
-        String version = customData.getUtfString(Keys.VERSION);
         byte status = customData.getByte(Keys.STATUS);
-        trace("LoginEventHandler called nickname: " + nickname + " encryptedPassword: " + encryptedPassword.toLowerCase() + " customData " + clientType + " " + version + " " + status);
+        short socialPlatform = customData.getShort(Keys.SOCIAL_PLATFORM);
+        short language = customData.getShort(Keys.LANGUAGE);
+        trace("LoginEventHandler: " + nickname + " /" + encryptedPassword.toLowerCase() + " socialPlatform " + socialPlatform + " status " + status + " language " + language);
         LoginResult result = null;
-        switch (clientType) {
-        case Common.CLIENT_BC_DESKTOP_AIR:
-            result = userService.login(nickname, encryptedPassword.toLowerCase(), status, version, session);
+        switch (socialPlatform) {
+        case Common.SOCIAL_BC:
+            result = userService.login(nickname, encryptedPassword.toLowerCase(), status, session);
             break;
-        case Common.CLIENT_BC_WEB:
-            result = userService.login(nickname, encryptedPassword.toLowerCase(), status, version, session);
-            break;
-        case Common.CLIENT_FB_DESKTOP_AIR:
-            result = userService.loginSocialNetworkUser(nickname, encryptedPassword.toLowerCase(), status, version);
-            break;
-        case Common.CLIENT_FB_WEB:
-            result = userService.loginSocialNetworkUser(nickname, encryptedPassword.toLowerCase(), status, version);
+        case Common.SOCIAL_FB:
+            result = userService.loginSocialNetworkUser(nickname, encryptedPassword.toLowerCase(), status);
             break;
         default:
             break;

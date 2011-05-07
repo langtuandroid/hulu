@@ -27,11 +27,10 @@ public interface IUserService {
 
     /**
      * only for beecas
-     * 
      * @param session
      *            TODO
      */
-    LoginResult login(String userName, String password, byte status, String version, ISession session);
+    LoginResult login(String userName, String password, byte status, ISession session);
 
     public boolean update(String username, List<String> fields, List<Object> values);
 
@@ -69,7 +68,7 @@ public interface IUserService {
     /**
      * only for FB with specify field
      */
-    LoginResult loginSocialNetworkUser(String fbUsername, String fbPassword, byte status, String version);
+    LoginResult loginSocialNetworkUser(String fbUsername, String fbPassword, byte status);
 
     public boolean updateSocialNetworkUser(String username, String fbUsername, List<String> fields, List<Object> values);
 

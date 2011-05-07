@@ -69,7 +69,7 @@ public class UserService implements IUserService {
     }
 
     @Override
-    public LoginResult login(String userName, String password, byte status, String version, ISession session) {
+    public LoginResult login(String userName, String password, byte status, ISession session) {
         if (validateUsername(userName)) {
             BeecasUser beecasUser = findUser(userName);
             if (beecasUser != null) {
@@ -86,9 +86,9 @@ public class UserService implements IUserService {
     public long createUser(String username, String password, String fullname, String email, int gender, DateTime birthday, String country, int clientType) {
         if (validateUsername(username)) {
             int registerService = 0;
-            if (clientType == Common.CLIENT_BC_WEB || clientType == Common.CLIENT_BC_DESKTOP_AIR) {
+            if (clientType == Common.SOCIAL_BC) {
                 registerService = UserConstants.FROM_BEECAS;
-            } else if (clientType == Common.CLIENT_FB_WEB || clientType == Common.CLIENT_FB_DESKTOP_AIR) {
+            } else if (clientType == Common.SOCIAL_FB) {
                 registerService = UserConstants.FROM_FACEBOOK;
             }
             int[] shardId = new int[1];
@@ -294,9 +294,9 @@ public class UserService implements IUserService {
     public boolean registerSocialNetworkUser(String username, String password, String email, int clientType, String fbUsername, String signedRequest, String fbFullname, String fbEmail, int fbGender,
             DateTime fbBirthday, String fbLocale, DateTime fbUpdateTime) {
         int registerService = 0;
-        if (clientType == Common.CLIENT_BC_WEB || clientType == Common.CLIENT_BC_DESKTOP_AIR) {
+        if (clientType == Common.SOCIAL_BC) {
             registerService = UserConstants.FROM_BEECAS;
-        } else if (clientType == Common.CLIENT_FB_WEB || clientType == Common.CLIENT_FB_DESKTOP_AIR) {
+        } else if (clientType == Common.SOCIAL_FB) {
             registerService = UserConstants.FROM_FACEBOOK;
         }
         if (checkSignedRequest(signedRequest)) {
@@ -493,7 +493,7 @@ public class UserService implements IUserService {
     }
 
     @Override
-    public LoginResult loginSocialNetworkUser(String fbUsername, String fbPassword, byte status, String version) {
+    public LoginResult loginSocialNetworkUser(String fbUsername, String fbPassword, byte status) {
         boolean isValidUser = checkSignedRequest(fbPassword);
         if (isValidUser) {
             boolean isRegister = checkRegister(fbUsername);

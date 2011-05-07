@@ -25,7 +25,7 @@ public class RequestBuddyListHandler extends BaseClientRequestHandler {
     public void handleClientRequest(User user, ISFSObject object) {
         IUserService userService = BeecasServiceManager.getService(IUserService.class);
         int clientType = ((Integer) user.getProperty(Keys.CLIENT_TYPE)).intValue();
-        if (clientType == Common.CLIENT_BC_WEB || clientType == Common.CLIENT_BC_DESKTOP_AIR) {
+        if (clientType == Common.SOCIAL_BC) {
             IFriendService friendService = BeecasServiceManager.getService(IFriendService.class);
             FriendList friendList = friendService.getFriendList(user.getName());
             ISFSObject sfsObjectRespondBuddyList = SFSObject.newInstance();
@@ -54,7 +54,7 @@ public class RequestBuddyListHandler extends BaseClientRequestHandler {
                 sfsObjectRespondBuddyList.putSFSArray(Keys.BUDDY_LIST, SFSArray.newInstance());
                 send(Commands.BUDDY_LIST, sfsObjectRespondBuddyList, user);
             }
-        } else if (clientType == Common.CLIENT_FB_WEB || clientType == Common.CLIENT_FB_DESKTOP_AIR) {
+        } else if (clientType == Common.SOCIAL_FB) {
             BeecasUser beecasUser = userService.findUser(user.getName());
             if (beecasUser != null) {
                 IFriendService friendService = BeecasServiceManager.getService(IFriendService.class);
