@@ -83,12 +83,12 @@ public class UserService implements IUserService {
         return LoginResult.UnknowFormat;
     }
 
-    public long createUser(String username, String password, String fullname, String email, int gender, DateTime birthday, String country, int clientType) {
+    public long createUser(String username, String password, String fullname, String email, int gender, DateTime birthday, String country, int socialPlatform) {
         if (validateUsername(username)) {
             int registerService = 0;
-            if (clientType == Common.SOCIAL_BC) {
+            if (socialPlatform == Common.SOCIAL_BC) {
                 registerService = UserConstants.FROM_BEECAS;
-            } else if (clientType == Common.SOCIAL_FB) {
+            } else if (socialPlatform == Common.SOCIAL_FB) {
                 registerService = UserConstants.FROM_FACEBOOK;
             }
             int[] shardId = new int[1];
@@ -291,12 +291,12 @@ public class UserService implements IUserService {
     }
 
     @Override
-    public boolean registerSocialNetworkUser(String username, String password, String email, int clientType, String fbUsername, String signedRequest, String fbFullname, String fbEmail, int fbGender,
+    public boolean registerSocialNetworkUser(String username, String password, String email, int socialPlatform, String fbUsername, String signedRequest, String fbFullname, String fbEmail, int fbGender,
             DateTime fbBirthday, String fbLocale, DateTime fbUpdateTime) {
         int registerService = 0;
-        if (clientType == Common.SOCIAL_BC) {
+        if (socialPlatform == Common.SOCIAL_BC) {
             registerService = UserConstants.FROM_BEECAS;
-        } else if (clientType == Common.SOCIAL_FB) {
+        } else if (socialPlatform == Common.SOCIAL_FB) {
             registerService = UserConstants.FROM_FACEBOOK;
         }
         if (checkSignedRequest(signedRequest)) {

@@ -23,7 +23,7 @@ public interface IUserService {
      * @param username
      *            : 6-50 character
      */
-    long createUser(String username, String password, String fullname, String email, int gender, DateTime birthday, String country, int clientType);
+    long createUser(String username, String password, String fullname, String email, int gender, DateTime birthday, String country, int socialPlatform);
 
     /**
      * only for beecas
@@ -43,7 +43,7 @@ public interface IUserService {
      * 
      * @param email
      *            TODO
-     * @param clientType
+     * @param socialPlatform
      *            TODO
      * @param fbUsername
      *            TODO
@@ -62,7 +62,7 @@ public interface IUserService {
      * @param fbUpdateTime
      *            TODO
      */
-    boolean registerSocialNetworkUser(String username, String password, String email, int clientType, String fbUsername, String signedRequest, String fbFullname, String fbEmail, int fbGender,
+    boolean registerSocialNetworkUser(String username, String password, String email, int socialPlatform, String fbUsername, String signedRequest, String fbFullname, String fbEmail, int fbGender,
             DateTime fbBirthday, String fbLocale, DateTime fbUpdateTime);
 
     /**
