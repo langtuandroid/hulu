@@ -1,0 +1,224 @@
+@charset "utf-8";
+#contain {
+	width: 980px;
+	margin: auto;
+	background-color: #FFFFFF;
+	border: 1px solid #FFFFFF;
+	
+}
+a{
+    color: #000000;
+    text-decoration: none;
+}
+a:link {
+    color: #000000;
+    text-decoration: none;
+}
+a:hover{
+	color: #FF0000;
+	text-decoration: none;
+}
+/* CSS Document */
+#left{
+	float: left;
+	width: 184px;
+}
+#content {
+	margin-right: 10px;
+	margin-left: 10px;
+	width: 590px;
+	float: left;
+}
+#menu {
+	text-align: left;
+	background-color: #FFFFFF;
+}
+
+#footer {
+	clear: both;
+}
+
+#right {
+	float: right;
+	width: 184px;
+}
+#infotable {
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-right-color: #BFB5C2;
+	border-bottom-color: #BFB5C2;
+	border-left-color: #BFB5C2;
+	margin-bottom: 10px;
+}
+#online {
+	background-color: #F5F5F5;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-right-color: #BFB5C2;
+	border-bottom-color: #BFB5C2;
+	border-left-color: #BFB5C2;
+	margin-bottom: 10px;
+}
+body {
+	background: url("../images/bg.jpg") no-repeat fixed 0 0 transparent;
+    color: #333333;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	margin: 0;
+	
+}
+#leftmenu {
+	padding-left: 15px;
+	background-attachment: scroll;
+	background-color: #F5F5F5;
+	background-image: url(../images/arrow.gif);
+	background-repeat: no-repeat;
+	background-position: 0 0;
+}#table {
+	margin-bottom: 5px;
+}
+#main {
+	margin-top: 5px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	padding: 0px;
+}
+#leftsea {
+	background-image: url(../images/timkiem.gif);
+	width: 13px;
+	float: left;
+	height: 36px;
+}
+#rightsea {
+	background-image: url(../images/timkiem1.gif);
+	background-repeat: repeat-x;
+	float: right;
+	height: 36px;
+	width: 967px;
+}
+#divoder {
+	margin-bottom: 10px;
+	border: 1px solid #BFB5C2;
+}
+#tdcell2 {
+    border-color: #BFB5C2;
+    border-right: 1px solid #D7D7D7;
+    border-style: none solid solid none;
+    border-width: medium 1px 1px medium;
+    bottom: 10px;
+    clip: rect(10px, 10px, 10px, 10px);
+    left: 10px;
+    margin: 0;
+    padding: 0;
+    right: 10px;
+    top: 10px;
+    width: 148px;
+}
+#tdcell {
+	border-color: #BFB5C2;
+	border-right: 1px solid #D7D7D7;
+	border-style: none solid solid none;
+	border-width: medium 1px 1px medium;
+	bottom: 10px;
+	clip: rect(10px, 10px, 10px, 10px);
+	left: 10px;
+	margin: 0;
+	padding: 0;
+	right: 10px;
+	top: 10px;
+	
+	
+}
+#infodes {
+	
+	
+	border-left-width: 1px;
+	
+	
+	border-left-style: solid;
+	
+	
+	border-left-color: #BFB5C2;
+}
+#tablecontent
+{
+	border-right-width: 1px;
+	border-left-width: 1px;
+	border-right-style: none;
+	border-left-style: solid;
+	border-right-color: #D7D7D7;
+	border-left-color: #D7D7D7;
+}
+#contenttable table {
+	margin: 0px;
+	padding: 0px;
+	border: 1px solid #999999;
+}
+#contenttable td {
+	padding-left: 5px;
+}
+.fontkm {
+	color: #00FF00;
+}
+.price {
+	color: #FF0000;
+}
+#introfooter {
+	color: #FFFFFF;
+	background-color: #000000;
+	text-align: right;
+}
+.fontvat {
+	color: #990066;
+	border-top-width: 1px;
+	border-top-style: dashed;
+	border-top-color: #666666;
+}
+#titlecart {
+	background-color: #F5F5F5;
+	height: 50px;
+	margin: 10px;
+}
+ #wrapper {
+            width: 500px;
+            margin: 20px auto;
+        }
+
+        ul#tabs {
+            text-align: center;
+            list-style: none;
+            padding: 2px 0px 1px;
+            border-bottom: 2px solid #3579a0;
+        }
+
+        ul#tabs li{
+            display: inline;
+        }
+
+        ul#tabs li a {
+            padding: 6px 0px 3px 7px;
+            color: white;
+            background: url(../images/left_bg.jpg) no-repeat top left;
+        }
+
+        ul#tabs li a:hover {
+            background-position: bottom left;
+        }
+        ul#tabs li a span {
+            padding: 6px 13px 3px 7px;
+            background: url(../images/right_bg.jpg) no-repeat top right;
+        }
+
+        ul#tabs li a span:hover {
+           background-position: bottom right;
+        }
