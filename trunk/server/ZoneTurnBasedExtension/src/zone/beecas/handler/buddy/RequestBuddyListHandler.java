@@ -24,7 +24,7 @@ public class RequestBuddyListHandler extends BaseClientRequestHandler {
     @Override
     public void handleClientRequest(User user, ISFSObject object) {
         IUserService userService = BeecasServiceManager.getService(IUserService.class);
-        int socialPlatform = ((Integer) user.getProperty(Keys.SOCIAL_PLATFORM)).intValue();
+        int socialPlatform = ((Short) user.getProperty(Keys.SOCIAL_PLATFORM)).intValue();
         if (socialPlatform == Common.SOCIAL_BC) {
             IFriendService friendService = BeecasServiceManager.getService(IFriendService.class);
             FriendList friendList = friendService.getFriendList(user.getName());
