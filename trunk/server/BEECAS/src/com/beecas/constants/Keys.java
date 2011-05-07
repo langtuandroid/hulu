@@ -17,9 +17,17 @@ public final class Keys {
 
     public static final String CLIENT_TYPE = "clientType";
 
+    public static final String SOCIAL_PLATFORM = "socialPlatform";
+
     public static final String PUBLISHER = "publisher";
 
     public static final String FB_BUDDY_LIST = "fbBuddyList";
+
+    public static final String LANGUAGE = "language";
+
+    public static final String PROFILE_VARS = "profileVars";
+
+    public static final String GAME_IDS_ARRAY = "gameIdsArray";
 
     // /////////////////////////////////////////////// FROM SERVER TO CLIENT
 
@@ -143,6 +151,14 @@ public final class Keys {
     public static final String SOCIAL_USERNAME = "socialUsername";
 
     public static final String SOCIAL_PASSWORD = "socialPassword";
+
+    public static final String IMAGE_ID = "imageId";
+
+    public static final String ROOM_GROUPS = "roomGroups";
+
+    public static final String CHAT = "chat";
+
+    public static final String CHECKSUM = "checksum";
 
     // /////////////////////////////////////////////// DATABASE
 
