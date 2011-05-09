@@ -1,201 +1,361 @@
-@charset "utf-8";
-#contain {
-	width: 980px;
-	margin: auto;
-	background-color: #FFFFFF;
-	border: 1px solid #FFFFFF;
-	
-}
-a{
-    color: #000000;
-    text-decoration: none;
-}
-a:link {
-    color: #000000;
-    text-decoration: none;
-}
-a:hover{
-	color: #FF0000;
-	text-decoration: none;
-}
-/* CSS Document */
-#left{
-	float: left;
-	width: 184px;
-}
-#content {
-	margin-right: 10px;
-	margin-left: 10px;
-	width: 590px;
-	float: left;
-}
-#menu {
-	text-align: left;
-	background-color: #FFFFFF;
-}
+/***** COPYRIGHTS 
+Theme Name: Clean 'n' Clear
+Theme URI: http://www.izwebz.com
+Description: 'Simple and Clean Design'
+Author: Demon Warlock
+Author URI: http://www.izwebz.com
+Version: 1.0
 
-#footer {
-	clear: both;
-}
+Note: This file may only be used as an example for the 
+"converting form PSD to xHTML" tutorial on izwebz.com. 
+This is NOT intented to be released to the public domain. 
+If you want to use this template, you must contact me for 
+permission.
 
-#right {
-	float: right;
-	width: 184px;
-}
-#infotable {
-	border-right-width: 1px;
-	border-bottom-width: 1px;
-	border-left-width: 1px;
-	border-right-style: solid;
-	border-bottom-style: solid;
-	border-left-style: solid;
-	border-right-color: #BFB5C2;
-	border-bottom-color: #BFB5C2;
-	border-left-color: #BFB5C2;
-	margin-bottom: 10px;
-}
-#online {
-	background-color: #F5F5F5;
-	border-right-width: 1px;
-	border-bottom-width: 1px;
-	border-left-width: 1px;
-	border-right-style: solid;
-	border-bottom-style: solid;
-	border-left-style: solid;
-	border-right-color: #BFB5C2;
-	border-bottom-color: #BFB5C2;
-	border-left-color: #BFB5C2;
-	margin-bottom: 10px;
-}
-body {
-	background: url("../images/bg.jpg") no-repeat fixed 0 0 transparent;
-    color: #333333;
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 11px;
-	font-weight: bold;
-	margin: 0;
-	
-}
-#leftmenu {
-	padding-left: 15px;
-	background-attachment: scroll;
-	background-color: #F5F5F5;
-	background-image: url(../images/arrow.gif);
-	background-repeat: no-repeat;
-	background-position: 0 0;
-}#table {
-	margin-bottom: 5px;
-}
-#main {
-	margin-top: 5px;
-	margin-right: 0px;
-	margin-bottom: 0px;
-	margin-left: 0px;
-	padding: 0px;
-}
-#leftsea {
-	background-image: url(../images/timkiem.gif);
-	width: 13px;
-	float: left;
-	height: 36px;
-}
-#rightsea {
-	background-image: url(../images/timkiem1.gif);
-	background-repeat: repeat-x;
-	float: right;
-	height: 36px;
-	width: 967px;
-}
-#divoder {
-	margin-bottom: 10px;
-	border: 1px solid #BFB5C2;
-}
-#tdcell2 {
-    border-color: #BFB5C2;
-    border-right: 1px solid #D7D7D7;
-    border-style: none solid solid none;
-    border-width: medium 1px 1px medium;
-    bottom: 10px;
-    clip: rect(10px, 10px, 10px, 10px);
-    left: 10px;
-    margin: 0;
-    padding: 0;
-    right: 10px;
-    top: 10px;
-    width: 148px;
-}
-#tdcell {
-	border-color: #BFB5C2;
-	border-right: 1px solid #D7D7D7;
-	border-style: none solid solid none;
-	border-width: medium 1px 1px medium;
-	bottom: 10px;
-	clip: rect(10px, 10px, 10px, 10px);
-	left: 10px;
+Any misuse of this file is violated the copyrights and therefore
+will be executed to the fullest extent of law.
+
+***********************/
+
+html, body, div, span, h1, h2, h3, h4, h5, h6, p,a, em, font, img,
+strong, ol, ul, li {
 	margin: 0;
 	padding: 0;
-	right: 10px;
-	top: 10px;
+	border: 0;
+	outline: 0;
+	vertical-align: baseline;
+	background: transparent;
+}
+body {
+	background: url(../images/body_bg.jpg);
+	font-family: georgia, helvetica, arial, sans-serif;
+	font-size: 62.5%;
+	line-height: 1.5em;
+}
+ul {
+	list-style: none;
+}
+
+ol {
+	list-style: decimal;
+}
+
+#page-wrap {
+	width: 900px;
+	height: auto;
+	margin: 0 auto;
+}
+
+/***MAIN SETTINGS ****/
+#top-page {
+	height: 42px;
+	overflow: hidden;
+}
+
+#top-page div.search {
+	float: right;	
+}
+
+input#s {
+	border: none;
+	font-size: 1.1em;
+	color: #a4a4a4;
+	margin-top: -5px;
+	margin-right:200px;
+	width: 223px; height: 18px;
+	background: url(../images/search.jpg) no-repeat;
+}
+select#s {
+	float: right;
+	border: none;
+	font-size: 1.1em;
+	color: #a4a4a4;
+	margin-top: -20px;	
+	width:150px; height: 20px;	
+}
+
+#banner {	
+	width: 800px;
+	height: 242px;
+	margin: 50px 50px 0px 50px;
+	position: relative;
+	background: url(../images/banner.png) no-repeat;
+}
+
+#banner h1 a{
+	display: block;
+	width: 160px;
+	height: 55px;
+	text-indent: -99999px;
+	position: absolute;
+	top: 87px; left: 48px;
+	background: url(images/logo.png) no-repeat;
+}
+
+/**** Main Content ****/
+
+#main-content {
+	/*overflow: auto;*/
+	margin: -26px 0px 150px 0px;
+/*	border: 2px solid #3579a0;*/
+}
+#main-content #listbox{
+	width: 800px;
+	height: 240px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius:10px;
+	margin: 50px 50px 0px 50px;
+	border: 1px solid #000000; 
+/*	background: #ffffff;*/
+}
+#listbox div#news{
+	width: 200px;
+	height: 200px;
+	border: 1px solid #b5b5b5;
+	-moz-border-radius: 10px;
+	-webkit-border-radius:10px;	
+	margin: 20px 30px 20px 30px;
+	float:left;
+}
+#listbox div#charge{
+	width: 200px;
+	height: 200px;
+	border: 1px solid #b5b5b5;
+	-moz-border-radius: 10px;
+	-webkit-border-radius:10px;	
+	margin: 20px 30px 20px 30px;
+	float:left;
+}
+
+#listbox div#sport{
+	width: 200px;
+	height: 200px;
+	border: 1px solid #b5b5b5;
+	-moz-border-radius: 10px;
+	-webkit-border-radius:10px;	
+	margin: 20px 30px 20px 20px;
+	float:left;
+}
+#listbox div#news a{
+	border-bottom: 1px solid #b5b5b5;
 	
-	
 }
-#infodes {
-	
-	
-	border-left-width: 1px;
-	
-	
-	border-left-style: solid;
-	
-	
-	border-left-color: #BFB5C2;
+#main-content #sidebar {
+	width: 255px;
+	float: left;
+	min-height: 400px;
+	background: url(images/sidebar-bg.jpg) no-repeat;
 }
-#tablecontent
-{
-	border-right-width: 1px;
-	border-left-width: 1px;
-	border-right-style: none;
-	border-left-style: solid;
-	border-right-color: #D7D7D7;
-	border-left-color: #D7D7D7;
+
+#main-content #primary {
+	width: 640px;
+	float: right;
+	margin-left: 5px;
+	background: url(images/post_bg.jpg) no-repeat;
 }
-#contenttable table {
-	margin: 0px;
-	padding: 0px;
-	border: 1px solid #999999;
+
+/**** SIDEBARS ****/
+#sidebar div#mainNav {
+	padding: 55px 25px 0px 25px;
 }
-#contenttable td {
-	padding-left: 5px;
+
+#sidebar div#mainNav ul {
+	font-size: 1.2em;
+	list-style: none;
 }
-.fontkm {
-	color: #00FF00;
+
+#sidebar div#mainNav ul li {
+	padding: 8px 0px 8px 0px;
+	background: url(images/saperators.jpg) repeat-x;
+	background-position: bottom center;
 }
-.price {
-	color: #FF0000;
+
+#sidebar div#mainNav ul li a {
+	color: white;
+	font-weight: bold;
+	text-decoration: none;
+	padding: 5px 11px;
+	background: url(images/bullets.png) no-repeat 0 50%;
 }
-#introfooter {
-	color: #FFFFFF;
-	background-color: #000000;
-	text-align: right;
+
+#sidebar div#mainNav li a:hover {
+	color: #a9ff00;
 }
-.fontvat {
-	color: #990066;
-	border-top-width: 1px;
-	border-top-style: dashed;
-	border-top-color: #666666;
+
+#sidebar div#mainNav ul li:last-child {
+	background: none;
 }
-#titlecart {
-	background-color: #F5F5F5;
-	height: 50px;
-	margin: 10px;
+
+/**** POST AREA ****/
+#primary div.post-item {
+	color: #f1f1f1;
+	font-size: 1.1em;
+	line-height: 1.6em;
+	padding: 25px;
+	overflow: hidden;
+	background: url(images/post-saperator.jpg) no-repeat;
+	background-position: bottom center;
 }
- #wrapper {
-            width: 500px;
+
+
+#primary div.post-item div.metadata {
+	float: left;
+	margin-right: 25px;
+}
+
+#primary div.post-item div.metadata img {
+	padding: 4px;
+	background: #f1f1f1;
+	margin: 0px 0px 22px 0px;
+}
+
+#primary div.post-item div.metadata p {
+	font-size: 1.0em;
+}
+
+#primary div.post-item div.metadata p.post {
+	padding-left: 18px;
+	background: url(images/post.png) no-repeat 0 50%;
+}
+
+#primary div.post-item div.metadata p.date {
+	padding-left: 18px;
+	background: url(images/date.png) no-repeat 0 50%;
+}
+
+#primary div.post-item div.metadata p.file {
+	padding-left: 18px;
+	background: url(images/cat.png) no-repeat 0 50%;
+}
+
+#primary div.post-item div.metadata p.comments {
+	padding-left: 18px;
+	background: url(images/comments.png) no-repeat 0 50%;
+}
+
+#primary div.post-item div.metadata a {
+	color: #f1f1f1;
+	text-decoration: none;
+}
+
+#primary div.post-item div.metadata a:hover {
+	text-decoration: underline;
+}
+
+#primary div.post-item div.metadata p strong {
+	color: #a9ff00;
+}
+
+#primary div.post-item h1 {
+	margin-bottom: 10px;
+	font-size: 1.6em;
+}
+
+#primary div.post-item h1 a {
+	color: #a9ff00;
+	text-decoration: none;
+}
+
+#primary div.post-item h1 a:hover {
+	color: #f1f1f1;
+	border-bottom: 1px dotted #f1f1f1;
+}
+
+#primary div.post-item div.readMore {
+	margin-top: 25px;
+}
+
+#primary div.post-item div.readMore a {
+	color: #a9ff00;
+	padding-left: 20px;
+	text-decoration: none;
+	background: url(images/read-more.png) no-repeat 0 50%;
+}
+
+#primary div.post-item div.readMore a:hover {
+	color: #f1f1f1;
+	background: url(images/read-more.png) no-repeat 4px 50%;
+}
+
+/**** FOOTER ****/
+#footer {
+	overflow: hidden;
+	background: url(images/footer_bg.jpg) no-repeat top center;
+}
+
+#footer div#footerNav {
+	padding: 10px 15px;
+	overflow: hidden;
+	background: url(images/saperators.jpg) repeat-x;
+	background-position: bottom center;
+}
+
+#footer div#footerNav p.copyright {
+	float: left;
+	color: #f1f1f1;
+	font-size: 1.1em;
+}
+
+#footer div#footerNav ul {
+	list-style: none;
+	float: right;
+}
+
+#footer div#footerNav ul li {
+	float: left;
+	padding-right: 15px;
+}
+
+#footer div#footerNav li a {
+	color: #f1f1f1;
+	text-decoration: none;
+	font-size: 1.1em;
+	font-weight: bold;
+}
+
+#footer div#footerNav li a:hover {
+	color: #a9ff00;
+	border-bottom: 2px solid #f1f1f1;
+}
+
+#footer div#footerInfo img {
+	float: left;
+	margin: 5px 0px 0px 0px;
+}
+#footer div#footerInfo div.rules {
+	color: #f1f1f1;
+	font-size: 1.2em;
+	line-height: 1.5em;
+	margin: 15px 5px 20px 0px;
+	width: 675px; height: 275px;
+	float: left;
+	background: red url(images/bubble.png) no-repeat;
+}
+#footer div#footerInfo div.rules a{
+	color:#a9ff00;
+	text-decoration: underline;
+}
+
+#footer div#footerInfo div.rules a:hover, #footer div#footerInfo div.rules a:active{
+	color:#a9ff00;
+	text-decoration: none;
+}
+#footer div#footerInfo div.rules div.inside {
+	padding: 25px 5px 0px 80px;
+}
+
+#footer div#footerInfo div.rules ol {
+	margin: 10px 0px 10px 30px;
+}
+
+#wrapper {
+            width:900px;
             margin: 20px auto;
         }
 
         ul#tabs {
-            text-align: center;
+            /*text-align: center;*/
+        	/*margin-left:100px;*/
             list-style: none;
             padding: 2px 0px 1px;
             border-bottom: 2px solid #3579a0;
