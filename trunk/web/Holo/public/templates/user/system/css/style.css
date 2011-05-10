@@ -51,6 +51,7 @@ ol {
 	width: 900px;
 	height: auto;
 	margin: 0 auto;
+		background: #333333;
 }
 
 /***MAIN SETTINGS ****/
@@ -113,6 +114,7 @@ input#s {
 #main-content {
 	/*overflow: auto;*/
 	margin: -26px 0px 0px 0px;
+	
 /*	background: url(../images/bg1.jpg) ;*/
 /*	border-bottom: 2px solid #3579a0;*/
 }
@@ -122,36 +124,44 @@ input#s {
 	-moz-border-radius: 10px;
 	-webkit-border-radius:10px;
 	margin: 50px 50px 0px 50px;
-	border: 1px solid #000000; 
-/*	background: #ffffff;*/
+	border: 2px solid #000000;
+	/*background: #000000 ;*/
+	
+}
+#listbox  a{
+	margin: 10px 0px 10px 10px;
+	line-height: 25px;
 }
 #listbox div#news{
 	width: 200px;
 	height: 200px;
-	border: 1px solid #b5b5b5;
+	border: 1px solid #000000;
 	-moz-border-radius: 10px;
 	-webkit-border-radius:10px;	
 	margin: 20px 30px 20px 30px;
 	float:left;
+	background: #e4e4e4;
 }
 #listbox div#charge{
 	width: 200px;
 	height: 200px;
-	border: 1px solid #b5b5b5;
+	border: 1px solid #000000;
 	-moz-border-radius: 10px;
 	-webkit-border-radius:10px;	
 	margin: 20px 30px 20px 30px;
 	float:left;
+	background: #e4e4e4;
 }
 
 #listbox div#sport{
 	width: 200px;
 	height: 200px;
-	border: 1px solid #b5b5b5;
+	border: 1px solid #000000;
 	-moz-border-radius: 10px;
 	-webkit-border-radius:10px;	
 	margin: 20px 30px 20px 20px;
 	float:left;
+	background: #e4e4e4;
 }
 #listbox div#news a{
 	border-bottom: 1px solid #b5b5b5;
@@ -159,21 +169,27 @@ input#s {
 }
 #main-content #listboxgame{
 	width: 800px;
-	height: 140px;
+	height: 150px;
 	-moz-border-radius: 10px;
 	-webkit-border-radius:10px;
 	margin: 30px 50px 0px 50px;
 	border: 1px solid #000000;
-	
+/*	background: #000000;*/
 }
+
 #listboxgame #vegas {
-	margin: 20px 50px 20px 50px;
+	margin: 20px 0px 0px 50px;
 	float: left;
 	padding: 6px 0px 3px 7px;
 	background: url(../images/bt2.jpg) center;
 	width: 100px; height: 100px;
 	-moz-border-radius: 5px;
 	-webkit-border-radius:5px;
+}
+#listboxgame p {
+	margin: 125px 0px 0 60px;
+	color: #ff0000;
+	font-size: 1.2em;
 }
 #main-content #sidebar {
 	width: 255px;
@@ -389,6 +405,7 @@ input#s {
 #wrapper {
             width:900px;
             margin: 20px auto;
+            background: url(../images/footer_bg.jpg) no-repeat top center;
         }
 
         ul#tabs {
