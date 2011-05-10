@@ -39,6 +39,13 @@ ul {
 ol {
 	list-style: decimal;
 }
+.button{
+	 padding: 6px 0px 3px 7px;
+	/* float:left;*/
+	 /*margin: 200px 0px 50px 50px;*/
+     color: white;
+     background: url(../images/left_bg.jpg) no-repeat top left;
+}
 
 #page-wrap {
 	width: 900px;
@@ -65,13 +72,11 @@ input#s {
 	width: 223px; height: 18px;
 	background: url(../images/search.jpg) no-repeat;
 }
-select#s {
-	float: right;
-	border: none;
+.select {	
+	border: 2px solid #b5b5b5;
 	font-size: 1.1em;
-	color: #a4a4a4;
-	margin-top: -20px;	
-	width:150px; height: 20px;	
+	color: #000000;
+	width:150px; height: 20px;
 }
 
 #banner {	
@@ -79,9 +84,20 @@ select#s {
 	height: 242px;
 	margin: 50px 50px 0px 50px;
 	position: relative;
-	background: url(../images/banner.png) no-repeat;
+	background: url(../images/banner2.jpg) no-repeat;
 }
-
+#banner #playnow{
+	float:left;
+	margin: 200px 0px 50px 50px; 
+}
+#banner #platforms{
+	float: left;
+	margin: 200px 0px 50px 50px;  
+}
+#banner #social-platforms{
+	float: left;
+	margin: 200px 0px 50px 50px; 
+}
 #banner h1 a{
 	display: block;
 	width: 160px;
@@ -96,8 +112,9 @@ select#s {
 
 #main-content {
 	/*overflow: auto;*/
-	margin: -26px 0px 150px 0px;
-/*	border: 2px solid #3579a0;*/
+	margin: -26px 0px 0px 0px;
+/*	background: url(../images/bg1.jpg) ;*/
+/*	border-bottom: 2px solid #3579a0;*/
 }
 #main-content #listbox{
 	width: 800px;
@@ -139,6 +156,24 @@ select#s {
 #listbox div#news a{
 	border-bottom: 1px solid #b5b5b5;
 	
+}
+#main-content #listboxgame{
+	width: 800px;
+	height: 140px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius:10px;
+	margin: 30px 50px 0px 50px;
+	border: 1px solid #000000;
+	
+}
+#listboxgame #vegas {
+	margin: 20px 50px 20px 50px;
+	float: left;
+	padding: 6px 0px 3px 7px;
+	background: url(../images/bt2.jpg) center;
+	width: 100px; height: 100px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius:5px;
 }
 #main-content #sidebar {
 	width: 255px;
@@ -280,13 +315,15 @@ select#s {
 /**** FOOTER ****/
 #footer {
 	overflow: hidden;
-	background: url(images/footer_bg.jpg) no-repeat top center;
+	background: url(../images/footer_bg.jpg) no-repeat top center;
+	margin: 30px 50px 0 50px;
+	border-top:1px solid #000000;  
 }
 
 #footer div#footerNav {
 	padding: 10px 15px;
 	overflow: hidden;
-	background: url(images/saperators.jpg) repeat-x;
+	background: url(../images/saperators.jpg) repeat-x;
 	background-position: bottom center;
 }
 
@@ -321,15 +358,16 @@ select#s {
 #footer div#footerInfo img {
 	float: left;
 	margin: 5px 0px 0px 0px;
+	
 }
 #footer div#footerInfo div.rules {
 	color: #f1f1f1;
 	font-size: 1.2em;
 	line-height: 1.5em;
-	margin: 15px 5px 20px 0px;
+	margin: 15px 0px 20px 100px;
 	width: 675px; height: 275px;
 	float: left;
-	background: red url(images/bubble.png) no-repeat;
+	background: red url(../images/bubble.png) no-repeat;
 }
 #footer div#footerInfo div.rules a{
 	color:#a9ff00;
@@ -382,3 +420,7 @@ select#s {
         ul#tabs li a span:hover {
            background-position: bottom right;
         }
+		ul#tabs #cbxacount{
+			float: right; 
+			margin-top: -20px;			
+}
