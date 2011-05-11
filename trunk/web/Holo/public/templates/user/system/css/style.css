@@ -79,13 +79,19 @@ input#s {
 	color: #000000;
 	width:150px; height: 20px;
 }
-
+#scrolling {
+	width: 900px;
+	height: 20px;
+	margin: 2px 0px 0px 0px;
+	border-bottom:  2px dashed #000000;
+	background: #ffffff;
+}
 #banner {	
 	width: 800px;
 	height: 242px;
-	margin: 50px 50px 0px 50px;
+	margin: 30px 50px 0px 50px;
 	position: relative;
-	background: url(../images/banner2.jpg) no-repeat;
+	background: url(../images/banner.png) no-repeat;
 }
 #banner #playnow{
 	float:left;
@@ -131,6 +137,10 @@ input#s {
 #listbox  a{
 	margin: 10px 0px 10px 10px;
 	line-height: 25px;
+	color: #0000ff;
+}
+#listbox  a:hover{	
+ 	color: #00ff00;
 }
 #listbox div#news{
 	width: 200px;
@@ -191,7 +201,7 @@ input#s {
 	color: #ff0000;
 	font-size: 1.2em;
 }
-#main-content #sidebar {
+#main-content #left-social {
 	width: 255px;
 	float: left;
 	min-height: 400px;
@@ -205,12 +215,17 @@ input#s {
 	background: url(images/post_bg.jpg) no-repeat;
 }
 
-/**** SIDEBARS ****/
-#sidebar div#mainNav {
+/**** LEFT SOCIAL ****/
+#left-social div#info-user {
 	padding: 55px 25px 0px 25px;
 }
-
-#sidebar div#mainNav ul {
+#info-user div#avata{
+	width: 100px;
+	height: 130px;
+	margin: 20px 50px 20px 50px;
+	border: 2px solid #ffffff;
+}
+#left-social div#lst-friends {
 	font-size: 1.2em;
 	list-style: none;
 }
@@ -374,6 +389,7 @@ input#s {
 #footer div#footerInfo img {
 	float: left;
 	margin: 5px 0px 0px 0px;
+	width: 200px; height: 275px;
 	
 }
 #footer div#footerInfo div.rules {

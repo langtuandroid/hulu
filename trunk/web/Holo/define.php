@@ -22,7 +22,7 @@ define('PUBLIC_PATH', realpath(dirname(__FILE__) . '/public'));
 define('TEMPLATE_PATH', PUBLIC_PATH . '/templates');
 //Duong dan den thu muc /template tren thanh dia chi
 define('TEMPLATE','/public/templates/');
-
+define('BLOCK_PATH',APPLICATION_PATH . '/blocks');
 define('URL_APPLICATION','/zendshopping');
 
 define('URL_SCRIPT',URL_APPLICATION . '/public/scripts');
