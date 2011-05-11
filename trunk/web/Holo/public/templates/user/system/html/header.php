@@ -50,5 +50,7 @@
 		            </ul>		            
 	    	 </div> <!--End .wrapper-->	    	 
 	     </div><!--End .top-paper-->
-	 
+	 	<div id="scrolling">
+	 	<h2>Random quote scrolling </h2>
+	 	</div>	<!--End .scrolling-->
 		

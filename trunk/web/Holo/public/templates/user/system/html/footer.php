@@ -9,7 +9,7 @@
 				</ul>
 			</div><!--End #footNav-->
 <!--			<div id="footerInfo">-->
-<!--				<img src="../images/author.png" alt="author" />-->
+<!--				<img src="../images/author.png" alt="" />-->
 <!--				<div class="rules">-->
 <!--					<div class="inside">-->
 <!--						<p>-->
@@ -24,8 +24,8 @@
 <!--							</ol>-->
 <!--						 <p>That's it! enjoy your stay and remember to come back often.</p>-->
 <!--				 	</div>End .inside-->
-<!--				</div>End .rules-->
-<!--			</div>End #footerInfo-->
+<!--			   </div>	End .rules-->
+<!--		   </div>End #footerInfo-->
 		</div><!--End #foot-->
      </div> 
 </body>
