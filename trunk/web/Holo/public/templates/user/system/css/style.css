@@ -120,7 +120,7 @@ input#s {
 #main-content {
 	/*overflow: auto;*/
 	margin: -26px 0px 0px 0px;
-	
+	background: #333333;
 /*	background: url(../images/bg1.jpg) ;*/
 /*	border-bottom: 2px solid #3579a0;*/
 }
@@ -347,7 +347,7 @@ input#s {
 #footer {
 	overflow: hidden;
 	background: url(../images/footer_bg.jpg) no-repeat top center;
-	margin: 30px 50px 0 50px;
+	margin: 30px 0px 0 0px;
 	border-top:1px solid #000000;  
 }
 
@@ -388,15 +388,13 @@ input#s {
 
 #footer div#footerInfo img {
 	float: left;
-	margin: 5px 0px 0px 0px;
-	width: 200px; height: 275px;
-	
+	margin: 5px 0px 0px 0px;	
 }
 #footer div#footerInfo div.rules {
 	color: #f1f1f1;
 	font-size: 1.2em;
 	line-height: 1.5em;
-	margin: 15px 0px 20px 100px;
+	margin: 15px 0px 20px 5px;
 	width: 675px; height: 275px;
 	float: left;
 	background: red url(../images/bubble.png) no-repeat;
