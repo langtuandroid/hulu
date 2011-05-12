@@ -3,24 +3,25 @@ class IndexController extends Zendvn_Controller_Action
 {
 	public function init()
 	{	
-		$template_path=TEMPLATE_PATH."/user/system/html";
-//		$this->loadTemplate($template_path);	
-		 $option = array('layoutPath'=>$template_path,'layout'=> 'header','viewSuffix'=>'php');
-		Zend_Layout::startMvc($option);
+		$template_path=TEMPLATE_PATH."/user/system";
+		$this->loadTemplate($template_path);	
+//		 $option = array('layoutPath'=>$template_path,'layout'=> 'header','viewSuffix'=>'php');
+//		Zend_Layout::startMvc($option);
 	}
 	public function preDispatch(){
 		$auth  = Zend_Auth::getInstance(); 	
-		if(!$auth->hasIdentity()){
-			if($this->_request->getActionName() != 'login'){
-		   		$this->_redirect('/index/login');
-			}
-		}				
+//		if(!$auth->hasIdentity()){
+//			if($this->_request->getActionName() != 'login'){
+//		   		$this->_redirect('/index/login');
+//			}
+//		}				
 	}
 	public function indexAction()
 	{
-		$auth  = Zend_Auth::getInstance(); 
-		$infoUser = $auth->getIdentity();
-		$this->view->fullName  = $infoUser->full_name;
+//		$auth  = Zend_Auth::getInstance(); 
+//		$infoUser = $auth->getIdentity();
+//		$this->view->fullName  = $infoUser->full_name;
+//		$this->_forward('index','index','user');
 	}
 	public function loginAction() {
 		if($this->_request->isPost()){

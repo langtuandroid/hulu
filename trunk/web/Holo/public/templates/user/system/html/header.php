@@ -30,13 +30,13 @@
 		<div id="top-page"> 
 		    <div id="wrapper">
 		           <ul id="tabs">
-		                <li><a><span>Application</span></a></li>
+		                <li><a href="<?php echo $this->url(array("controller"=>"social","action"=>"index"),null,true);?>" ><span>Application</span></a></li>
 		                <li><a><span>Forum</span></a></li>
 		                <li><a><span>Social</span></a></li>
 <!--		                <li><a><span>Contact</span></a></li>-->						
 <!--		                <li>  <input id="s" type="text" value="search"   ></td></li>-->
 		                <div class="search">
-							<form method="get" id="" action=" ">
+							<form method="POST" id="" action="<?php echo $this->url(array("controller"=>"social","action"=>"index"),null,true);?>">
 								<input type="text" name="s" id="s" value="Type to search for something" />
 							</form>
 							<div id="cbxacount">
