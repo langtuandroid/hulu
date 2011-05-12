@@ -81,7 +81,7 @@ input#s {
 }
 #scrolling {
 	width: 900px;
-	height: 20px;
+	height: 30px;
 	margin: 2px 0px 0px 0px;
 	border-bottom:  2px dashed #000000;
 	background: #ffffff;
@@ -118,8 +118,9 @@ input#s {
 /**** Main Content ****/
 
 #main-content {
-	/*overflow: auto;*/
-	margin: -26px 0px 0px 0px;
+	overflow: auto;
+	width:900px;
+	margin: 0px 0px 0px 0px;
 	background: #333333;
 /*	background: url(../images/bg1.jpg) ;*/
 /*	border-bottom: 2px solid #3579a0;*/
@@ -202,56 +203,165 @@ input#s {
 	font-size: 1.2em;
 }
 #main-content #left-social {
-	width: 255px;
-	float: left;
-	min-height: 400px;
-	background: url(images/sidebar-bg.jpg) no-repeat;
+	width: 200px;
+	float: left;	
+	margin-top:2px;
+	border: 1px solid #000000;
+	
+	/*min-height: 400px;*/
+	
 }
 
 #main-content #primary {
-	width: 640px;
+	width: 689px;
 	float: right;
 	margin-left: 5px;
 	background: url(images/post_bg.jpg) no-repeat;
+	border: 2px solid #ffffff;
 }
 
 /**** LEFT SOCIAL ****/
 #left-social div#info-user {
-	padding: 55px 25px 0px 25px;
+	
+	height: 300px;	
+	border: 2px solid #ffffff;
 }
 #info-user div#avata{
 	width: 100px;
 	height: 130px;
-	margin: 20px 50px 20px 50px;
-	border: 2px solid #ffffff;
-}
-#left-social div#lst-friends {
-	font-size: 1.2em;
-	list-style: none;
+	margin: 20px 40px 0px 20px;
+	border: 1px solid #ffffff;
 }
 
-#sidebar div#mainNav ul li {
+#avata img {
+	width: 100px;
+	height: 130px;
+	margin: 0px 0px 0px 0px;	
+}
+#info-user div#money{
+	width: 100px;
+	height: 20px;
+	margin: 5px 40px 0px 20px;
+	border: 1px solid #000000;
+	background: #ffffff;
+	
+}
+#left-social div#lst-friends {
+	border: 2px solid #ffffff;	
+}
+#left-social div#item-friends {
+	width: 180px;
+	height: 50px;
+	margin: 10px 10px 0px 10px;	
+}
+#item-friends #avata-small{
+	margin:0px 5px 0px 5px;
+	float: left;	
+	background: url(../images/bt2.jpg) center;
+	width: 40px; height: 40px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius:5px;
+}
+#avata-small img{
+	width: 40px;
+	height: 40px;
+	margin: 0px 0px 0px 0px;
+}
+#item-friends h3{
+	font-size: 1.2em;
+	line-height: 0.8em;
+	color: blue;
+	font-weight: bold;
+	margin: 0px 0px 0px 10px;
+	float left;
+}
+#lst-friends  div#aaaaa {
 	padding: 8px 0px 8px 0px;
-	background: url(images/saperators.jpg) repeat-x;
+	margin-top :10px;
+	margin-bottom:2px;
+	background: url(../images/saperators.jpg) repeat-x;
 	background-position: bottom center;
 }
 
-#sidebar div#mainNav ul li a {
+#lst-friends a {
 	color: white;
 	font-weight: bold;
 	text-decoration: none;
 	padding: 5px 11px;
-	background: url(images/bullets.png) no-repeat 0 50%;
+	font-size: 1.8em;
+	margin-left:40px;
+	background: url(../images/bullets.png) no-repeat 0 50%;
 }
 
-#sidebar div#mainNav li a:hover {
+#lst-friends a:hover {
 	color: #a9ff00;
+	text-decoration: underline;
 }
+#info-user  div#aaaaa {
+	padding: 8px 0px 8px 0px;
+	margin-top :10px;
+	background: url(../images/saperators.jpg) repeat-x;
+	background-position: bottom center;
+}
+
+#info-user a {
+	color: white;
+	font-weight: bold;
+	text-decoration: none;
+	padding: 5px 11px;
+	font-size: 1.8em;
+	margin-left:40px;
+	background: url(../images/bullets.png) no-repeat 0 50%;
+}
+
+#info-user a:hover {
+	color: #a9ff00;
+	text-decoration: underline;
+}
+
 
 #sidebar div#mainNav ul li:last-child {
 	background: none;
 }
+/**** PRIMARY *****/
+#primary div#class{
+	width: 570px;
+	height: 200px;
+	margin:20px 60px 0px 60px;
+	border: 1px solid #000000;
+	-moz-border-radius: 10px;
+	-webkit-border-radius:10px;
+	background: #ffffff
+	
+}
+#class a{
+	font-size: 1.3em;
+	line-height: 3em;
+	color: blue;
+	font-weight: bold;
+	margin: 0px 0px 0px 50px;
+}
+#primary div#basic{
+	width: 570px;
+	height: 300px;
+	margin:20px 60px 0px 60px;
+	border: 1px solid #000000;
+	-moz-border-radius: 10px;
+	-webkit-border-radius:10px;
+	background: #ffffff
+}
+#basic a{
+	font-size: 1.3em;
+	line-height: 3em;
+	color: blue;
+	font-weight: bold;
+	margin: 0px 0px 0px 50px;
+}
 
+#basic #playnow{
+	float:left;
+	margin: 0px 0px 0px 500px;
+}
 /**** POST AREA ****/
 #primary div.post-item {
 	color: #f1f1f1;
