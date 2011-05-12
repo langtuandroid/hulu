@@ -5,9 +5,9 @@ package com.beecas.constants;
  */
 public final class Common {
 
-    public static final int LANGUAGE_ENGLISH = 0;
+    public static final short LANGUAGE_ENGLISH = 0;
 
-    public static final int LANGUAGE_VIETNAMESE = 1;
+    public static final short LANGUAGE_VIETNAMESE = 1;
 
     public static final int HIDE_BIRTHDAY = 0; //default
 
