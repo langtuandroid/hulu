@@ -8,6 +8,6 @@ class SocialController extends Zendvn_Controller_Action{
 //		Zend_Layout::startMvc($option);
 	}
 	public function indexAction() {
-		echo "sssssss";
+	
 	}
 }
