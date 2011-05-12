@@ -30,7 +30,7 @@
 		<div id="top-page"> 
 		    <div id="wrapper">
 		           <ul id="tabs">
-		                <li><a href="<?php echo $this->url(array("controller"=>"social","action"=>"index"),null,true);?>" ><span>Application</span></a></li>
+		                <li><a href="<?php echo $this->url(array("controller"=>"index","action"=>"index"),null,true);?>" ><span>Application</span></a></li>
 		                <li><a><span>Forum</span></a></li>
 		                <li><a href="<?php echo $this->url(array("controller"=>"social","action"=>"index"),null,true);?>"><span>Social</span></a></li>
 <!--		                <li><a><span>Contact</span></a></li>-->						
