@@ -17,7 +17,9 @@ public class ClientInfoHandler extends BaseClientRequestHandler {
         String version = object.getUtfString(Keys.VERSION);
         trace(user.getName() + " sent clientType " + clientType + " vendor " + vendor + " version " + version + " socialPlatform " + socialPlatform);
         user.setProperty(Keys.SOCIAL_PLATFORM, socialPlatform);
-        send(Commands.CLIENT_INFO, SFSObject.newInstance(), user);
+        ISFSObject respond = SFSObject.newInstance();
+        
+        send(Commands.CLIENT_INFO, respond, user);
     }
 
 }
