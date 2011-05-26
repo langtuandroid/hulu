@@ -24,5 +24,11 @@
 	<classpathentry kind="lib" path="lib/jetty-websocket-7.4.1.v20110513.jar"/>
 	<classpathentry kind="lib" path="lib/jetty-xml-7.4.1.v20110513.jar"/>
 	<classpathentry kind="lib" path="lib/servlet-api-2.5.jar"/>
+	<classpathentry kind="lib" path="lib/bayeux-api-2.2.0.RC0.jar"/>
+	<classpathentry kind="lib" path="lib/cometd-java-annotations-2.2.0.RC0.jar"/>
+	<classpathentry kind="lib" path="lib/cometd-java-common-2.2.0.RC0.jar"/>
+	<classpathentry kind="lib" path="lib/cometd-java-oort-2.2.0.RC0.jar"/>
+	<classpathentry kind="lib" path="lib/cometd-java-server-2.2.0.RC0.jar"/>
+	<classpathentry kind="lib" path="lib/cometd-websocket-jetty-2.2.0.RC0.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
