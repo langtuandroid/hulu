@@ -16,7 +16,7 @@ import org.eclipse.jetty.xml.XmlConfiguration;
 
 public class SimplestServer {
 	public static void main(String[] args) throws Exception {
-		Server server = new Server(8080);
+		Server server = new Server();
 		
         XmlConfiguration configuration = new XmlConfiguration(new FileInputStream("jetty.xml"));
         configuration.configure(server);
@@ -62,7 +62,7 @@ public class SimplestServer {
 		// Cometd servlet
 		CometdServlet cometdServlet = new AnnotationCometdServlet();
 		ServletHolder comet = new ServletHolder(cometdServlet);
-//		context.addServlet(comet, "/cometd/*");
+		context.addServlet(comet, "/cometd/*");
 		comet.setInitParameter("timeout", "20000");
 		comet.setInitParameter("interval", "100");
 		comet.setInitParameter("maxInterval", "10000");
