@@ -85,9 +85,6 @@ public class CometdDemo
         ContextHandlerCollection contexts = new ContextHandlerCollection();
         server.setHandler(contexts);
 
-        // MovedContextHandler moved = new MovedContextHandler(contexts,"/","/cometd");
-        // moved.setDiscardPathInfo(true);
-
         ServletContextHandler context = new ServletContextHandler(contexts,"/",ServletContextHandler.SESSIONS);
 //        context.setBaseResource(
 //                new ResourceCollection(new Resource[]
