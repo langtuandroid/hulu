@@ -65,14 +65,14 @@ public class CometdDemo2 {
 
         WebAppContext wac = new WebAppContext();
         wac.setDescriptor("./WEB-INF/web.xml");
-        wac.setResourceBase("./bin");
+        wac.setResourceBase("D:/Cometd.jar");
         wac.setContextPath("/");
         wac.setParentLoaderPriority(true);
 
         ContextHandlerCollection contexts = new ContextHandlerCollection();
         contexts.setHandlers(new Handler[] { context, wac });
 
-        server.setHandler(context);
+        server.setHandler(contexts);
 
         server.start();
 
