@@ -25,6 +25,7 @@ import org.cometd.server.filter.DataFilter;
 import org.cometd.server.filter.DataFilterMessageListener;
 import org.cometd.server.filter.JSONDataFilter;
 import org.cometd.server.filter.NoMarkupFilter;
+import org.eclipse.jetty.util.log.Log;
 
 @Service("chat")
 public class ChatService
@@ -53,6 +54,7 @@ public class ChatService
     @Listener("/service/members")
     public void handleMembership(ServerSession client, ServerMessage message)
     {
+        Log.info("handleMembership");
         Map<String, Object> data = message.getDataAsMap();
         final String room = ((String)data.get("room")).substring("/chat/".length());
         Map<String, String> roomMembers = _members.get(room);
@@ -79,6 +81,7 @@ public class ChatService
 
     private void broadcastMembers(String room, Set<String> members)
     {
+        Log.info("broadcastMembers");
         // Broadcast the new members list
         ClientSessionChannel channel = _session.getLocalSession().getChannel("/members/"+room);
         channel.publish(members);
@@ -96,6 +99,7 @@ public class ChatService
     @Listener("/service/privatechat")
     protected void privateChat(ServerSession client, ServerMessage message)
     {
+        Log.info("privateChat");
         Map<String,Object> data = message.getDataAsMap();
         String room = ((String)data.get("room")).substring("/chat/".length());
         Map<String, String> membersMap = _members.get(room);
