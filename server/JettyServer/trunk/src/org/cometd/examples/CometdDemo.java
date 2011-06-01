@@ -117,7 +117,7 @@ public class CometdDemo {
 		// Cometd servlet
 		CometdServlet cometdServlet = new AnnotationCometdServlet();
 		ServletHolder comet = new ServletHolder(cometdServlet);
-		context.addServlet(comet, "/cometd/*");
+		context.addServlet(comet, "/cometd/*");		
 		comet.setInitParameter("timeout", "20000");
 		comet.setInitParameter("interval", "100");
 		comet.setInitParameter("maxInterval", "10000");
