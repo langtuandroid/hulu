@@ -56,21 +56,21 @@ public class CometdDemo2 {
         XmlConfiguration configuration = new XmlConfiguration(new FileInputStream("jetty.xml"));
         configuration.configure(server);
 
-        ServletContextHandler context = new ServletContextHandler(ServletContextHandler.SESSIONS);
-        context.setContextPath("/");
-        context.setWelcomeFiles(new String[] { "chat.html" });
-        context.setBaseResource(new ResourceCollection(new Resource[] { Resource.newResource("webapp/"), }));
-
-        ServletHolder dftServlet = context.addServlet(DefaultServlet.class, "/");
+//        ServletContextHandler context = new ServletContextHandler(ServletContextHandler.SESSIONS);
+//        context.setContextPath("/");
+//        context.setWelcomeFiles(new String[] { "chat.html" });
+//        context.setBaseResource(new ResourceCollection(new Resource[] { Resource.newResource("webapp/"), }));
+//
+//        ServletHolder dftServlet = context.addServlet(DefaultServlet.class, "/");
 
         WebAppContext wac = new WebAppContext();
         wac.setDescriptor("./WEB-INF/web.xml");
-        wac.setResourceBase("D:/Cometd.jar");
+        wac.setResourceBase("./bin");
         wac.setContextPath("/");
         wac.setParentLoaderPriority(true);
 
         ContextHandlerCollection contexts = new ContextHandlerCollection();
-        contexts.setHandlers(new Handler[] { context, wac });
+        contexts.setHandlers(new Handler[] { wac });
 
         server.setHandler(contexts);
 
